@@ -35,6 +35,16 @@ public class ConfigWindow : Window, IDisposable
             Configuration.Save();
         }
 
+        var abbreviateJobs = Configuration.AbbreviateJobs;
+        if (hideNames)
+        {
+            if (ImGui.Checkbox("Abbreviate Jobs When Hiding names", ref abbreviateJobs))
+            {
+                Configuration.AbbreviateJobs = abbreviateJobs;
+                Configuration.Save();
+            }
+        }
+
         var hidePortraits = Configuration.HidePortraits;
         if (ImGui.Checkbox("Hide Portraits", ref hidePortraits))
         {

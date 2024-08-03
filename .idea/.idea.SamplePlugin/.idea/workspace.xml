@@ -5,22 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f36015a-ef0b-4834-8dae-ef9cbbf0d332" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CCAnon/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CCAnon/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CCAnon/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CCAnon/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SamplePlugin/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CCAnon/GlamourerManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CCAnon/Service.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SamplePlugin.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SamplePlugin/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Configuration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SamplePlugin/Dalamud.Plugin.Bootstrap.targets" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Dalamud.Plugin.Bootstrap.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SamplePlugin/Plugin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Plugin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SamplePlugin/SamplePlugin.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/CCAnon.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SamplePlugin/SamplePlugin.json" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/CCAnon.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SamplePlugin/Windows/ConfigWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Windows/ConfigWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SamplePlugin/Windows/MainWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SamplePlugin/packages.lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/packages.lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CCAnon/Maskers/AppearanceMasker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CCAnon/Maskers/GlamourMasker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CCAnon/Maskers/Glamours.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CCAnon/Maskers/NameMasker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCAnon/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Configuration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCAnon/GlamourerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/GlamourerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCAnon/Plugin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Plugin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCAnon/Windows/ConfigWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Windows/ConfigWindow.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,14 +27,18 @@
     <option name="defaultAccountId" value="7d95d265-3450-4c38-9e32-da511990fe61" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc57b96eff0e484c9ca4b705dd9c3cf0c800/0a/740dff56/ApplyDesign.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc57b96eff0e484c9ca4b705dd9c3cf0c800/3e/5cffb1aa/IGlamourerApi.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc57b96eff0e484c9ca4b705dd9c3cf0c800/41/62a265aa/IGlamourerApiState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc57b96eff0e484c9ca4b705dd9c3cf0c800/63/a1208cd5/SetItem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc57b96eff0e484c9ca4b705dd9c3cf0c800/78/9a9fb478/ApplyFlag.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc57b96eff0e484c9ca4b705dd9c3cf0c800/7c/50012570/ApplyState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc57b96eff0e484c9ca4b705dd9c3cf0c800/e3/6dee1c1d/IGlamourerApiDesigns.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CCAnon/Plugin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CCAnon/Windows/ConfigWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CCAnon/packages.lock.json" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 6
 }]]></component>
@@ -83,16 +80,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702226338947</updated>
-      <workItem from="1722700801759" duration="3871000" />
+      <workItem from="1722700801759" duration="8164000" />
     </task>
+    <task id="LOCAL-00001" summary="beeeeg changes">
+      <option name="closed" value="true" />
+      <created>1722704713108</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722704713108</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="beeeeg changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="beeeeg changes" />
   </component>
 </project>
