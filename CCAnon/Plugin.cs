@@ -67,7 +67,6 @@ public sealed class Plugin : IDalamudPlugin
     }
     
     
-    //todo toggle off titles
 
     private void OnTestCommand(string command, string arguments)
     {

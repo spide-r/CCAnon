@@ -40,6 +40,9 @@ public class NameMasker
                 }
                 plate.Name = '《' + job + '》';
                 plate.Title = "";
+                plate.FreeCompanyTag = "";
+                plate.RemoveField(NamePlateStringField.Title);
+                plate.RemoveField(NamePlateStringField.FreeCompanyTag);
             }
         }
     }

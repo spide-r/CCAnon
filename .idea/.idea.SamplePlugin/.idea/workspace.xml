@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f36015a-ef0b-4834-8dae-ef9cbbf0d332" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CCAnon/Maskers/AppearanceMasker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CCAnon/Maskers/GlamourMasker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CCAnon/Maskers/Glamours.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CCAnon/Maskers/NameMasker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCAnon/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Configuration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCAnon/GlamourerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/GlamourerManager.cs" afterDir="false" />
+    <list default="true" id="3f36015a-ef0b-4834-8dae-ef9cbbf0d332" name="Changes" comment="should be working now">
+      <change afterPath="$PROJECT_DIR$/CCAnon/Maskers/PortraitHider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CCAnon/Windows/PortraitHidingWIndow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SamplePlugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SamplePlugin/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCAnon/CCAnon.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/CCAnon.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCAnon/Maskers/AppearanceMasker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Maskers/AppearanceMasker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCAnon/Maskers/NameMasker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Maskers/NameMasker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CCAnon/Plugin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Plugin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCAnon/Windows/ConfigWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Windows/ConfigWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCAnon/packages.lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/packages.lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +33,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc57b96eff0e484c9ca4b705dd9c3cf0c800/78/9a9fb478/ApplyFlag.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc57b96eff0e484c9ca4b705dd9c3cf0c800/7c/50012570/ApplyState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc57b96eff0e484c9ca4b705dd9c3cf0c800/e3/6dee1c1d/IGlamourerApiDesigns.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d602d7be7857464d8f3d3dafdcbb46a334c610/05/3bf6eca2/IPluginLog.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d602d7be7857464d8f3d3dafdcbb46a334c610/07/58976fd5/INamePlateUpdateHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d602d7be7857464d8f3d3dafdcbb46a334c610/4b/3a2e493b/NamePlateStringField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d602d7be7857464d8f3d3dafdcbb46a334c610/4d/6f11cdb8/Window.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d602d7be7857464d8f3d3dafdcbb46a334c610/4f/0eb1c301/IClientState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d602d7be7857464d8f3d3dafdcbb46a334c610/a7/f2dd0ff3/ObjectKind.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d602d7be7857464d8f3d3dafdcbb46a334c610/d2/e5ab03f0/NamePlateKind.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/RiderProjects/CCAnon/CCAnon/Maskers/AppearanceMasker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CCAnon/Plugin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CCAnon/Windows/ConfigWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CCAnon/packages.lock.json" root0="FORCE_HIGHLIGHTING" />
@@ -80,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702226338947</updated>
-      <workItem from="1722700801759" duration="8164000" />
+      <workItem from="1722700801759" duration="12117000" />
     </task>
     <task id="LOCAL-00001" summary="beeeeg changes">
       <option name="closed" value="true" />
@@ -90,7 +97,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722704713108</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="more stuff">
+      <option name="closed" value="true" />
+      <created>1722709053191</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722709053191</updated>
+    </task>
+    <task id="LOCAL-00003" summary="should be working now">
+      <option name="closed" value="true" />
+      <created>1722711269346</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722711269346</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +125,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="beeeeg changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="beeeeg changes" />
+    <MESSAGE value="more stuff" />
+    <MESSAGE value="should be working now" />
+    <option name="LAST_COMMIT_MESSAGE" value="should be working now" />
   </component>
 </project>

@@ -4,6 +4,7 @@ using System.Diagnostics;
 using Dalamud.Game.ClientState.Objects.Enums;
 using Dalamud.Game.ClientState.Objects.SubKinds;
 using Dalamud.Game.Gui.NamePlate;
+using Dalamud.Plugin.Services;
 
 namespace CCAnon.Maskers;
 
@@ -17,6 +18,28 @@ public class AppearanceMasker
     {
         this.plugin = plugin;
         Service.ClientState.TerritoryChanged += TerritoryChanged;
+        Service.Framework.Update += OnFrameworkUpdate;
+    }
+
+    private void OnFrameworkUpdate(IFramework framework)
+    {
+        if (!Service.ClientState.IsPvPExcludingDen)
+        {
+            return;
+        }
+        if (appliedUsers.Count != 9) //all 9 players have been modified - dont need to do anything
+        {
+            Service.PluginLog.Info($"Count is {appliedUsers.Count}");
+            try
+            {
+                applyMasking();
+            }
+            catch (Exception e)
+            {
+                Service.PluginLog.Error("aaa", e);
+            }
+        }
+        
     }
 
     public void TerritoryChanged(ushort obj)
