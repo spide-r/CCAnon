@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using Dalamud.Game.ClientState.Objects.Enums;
+using Dalamud.Game.ClientState.Objects.SubKinds;
 using Dalamud.Game.Gui.NamePlate;
 
 namespace CCAnon.Maskers;
@@ -20,12 +21,27 @@ public class AppearanceMasker
 
     public void TerritoryChanged(ushort obj)
     {
+        Service.PluginLog.Info("Territory Changed!");
         appliedUsers.Clear();
-        applyDefaultHyur();
+        try
+        {
+            applyMasking();
+
+        }
+        catch (Exception e)
+        {
+            Service.PluginLog.Error("aaa", e);
+        }
     }
 
-    private void applyDefaultHyur()
+    private void applyMasking()
     {
+        if (!Service.ClientState.IsPvPExcludingDen)
+        {
+            Service.PluginLog.Info("Not PVP Excluding den"); //todo why does this only work when manually loading
+
+            //return;
+        }
         foreach (var gameObject in Service.ObjectTable)
         {
             if (gameObject.ObjectKind == ObjectKind.Player)
@@ -35,18 +51,39 @@ public class AppearanceMasker
                     continue;
                 }
                 
+                Service.PluginLog.Info("Applied users list does not contain the game object id");
+
                 if (gameObject.GameObjectId == Service.ClientState.LocalPlayer.GameObjectId)
                 {
+                    Service.PluginLog.Info("ID is us - ignore");
+
                     continue;
                 }
-                
-                Service.GlamourerManager.ApplyCustomization(gameObject.ObjectIndex, hyur);
+                IPlayerCharacter pc = (IPlayerCharacter) gameObject;
+                Service.PluginLog.Info($"PC is {pc.Name}");
+
+                String job = pc.ClassJob.GameData.Abbreviation.ToString();
+                String glamour = Glamours.getGlamour(job);
+                if (plugin.Configuration.MaskPlayerAppearance)
+                {
+                    Service.PluginLog.Info("Applying player appearance");
+                    Service.GlamourerManager.ApplyCustomization(gameObject.ObjectIndex, hyur);
+
+                }
+
+                if (plugin.Configuration.MaskPlayerGlamours)
+                {
+                    Service.PluginLog.Info("Applying outfit change");
+
+                    Service.GlamourerManager.ApplyOutfit(gameObject.ObjectIndex, glamour);
+
+                }
                 appliedUsers.Add(gameObject.GameObjectId);
 
             }
         }
-
     }
+    
     
     
 }

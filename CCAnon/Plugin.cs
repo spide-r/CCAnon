@@ -48,18 +48,27 @@ public sealed class Plugin : IDalamudPlugin
         });
 
         pluginInterface.UiBuilder.OpenConfigUi += ToggleConfigUI;
+        pluginInterface.UiBuilder.Draw += DrawUI;
 
         NameMasker = new NameMasker(this);
         AppearanceMasker = new AppearanceMasker(this);
 
     }
     
+    private void DrawUI()
+    {
+        this.WindowSystem.Draw();
+    }
+
 
     private void OnCommand(string command, string arguments)
     {
         ToggleConfigUI();
     }
     
+    
+    //todo toggle off titles
+
     private void OnTestCommand(string command, string arguments)
     {
         AppearanceMasker.TerritoryChanged(0);

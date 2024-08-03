@@ -16,7 +16,7 @@ public class NameMasker
 
     private void OnNamePlateUpdate(INamePlateUpdateContext context, IReadOnlyList<INamePlateUpdateHandler> handlers)
     {
-        if (!Service.ClientState.IsPvPExcludingDen || plugin.Configuration.HideNames)
+        if (!Service.ClientState.IsPvPExcludingDen || !plugin.Configuration.HideNames)
         {
             return;
         }
@@ -26,7 +26,7 @@ public class NameMasker
             if(plate.PlayerCharacter == null) continue;
             if(plate.BattleChara == null) continue;
             if(plate.BattleChara.ClassJob.GameData == null) continue;
-            if(plate.PlayerCharacter.GameObjectId == Service.ClientState.LocalContentId) continue; //todo this doesnt work
+            if(plate.PlayerCharacter.GameObjectId == Service.ClientState.LocalPlayer.GameObjectId) continue;
             if (!plate.Name.ToString().Contains('》')) //《 and 》
             {
                 String job;
@@ -39,6 +39,7 @@ public class NameMasker
                     job = plate.BattleChara.ClassJob.GameData.NameEnglish.ToString();
                 }
                 plate.Name = '《' + job + '》';
+                plate.Title = "";
             }
         }
     }

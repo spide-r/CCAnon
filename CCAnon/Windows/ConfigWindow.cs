@@ -14,10 +14,11 @@ public class ConfigWindow : Window, IDisposable
     // and the window ID will always be "###XYZ counter window" for ImGui
     public ConfigWindow(Plugin plugin) : base("CCAnon")
     {
-        Flags = ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoScrollbar |
-                ImGuiWindowFlags.NoScrollWithMouse;
-
-        Size = new Vector2(232, 90);
+        SizeConstraints = new WindowSizeConstraints
+        {
+            MinimumSize = new Vector2(100, 100),
+            MaximumSize = new Vector2(300, 200)
+        };
         SizeCondition = ImGuiCond.Always;
 
         Configuration = plugin.Configuration;
@@ -27,7 +28,6 @@ public class ConfigWindow : Window, IDisposable
     
     public override void Draw()
     {
-        // can't ref a property, so use a local copy
         var hideNames = Configuration.HideNames;
         if (ImGui.Checkbox("Hide Player Names", ref hideNames))
         {

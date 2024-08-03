@@ -11,7 +11,7 @@ public class Configuration : IPluginConfiguration
 
     public bool HidePortraits { get; set; } = true;
     public bool HideNames { get; set; } = true;
-    public bool AbbreviateJobs { get; set; } = true;
+    public bool AbbreviateJobs { get; set; } = false;
     public bool MaskPlayerAppearance { get; set; } = true;
     public bool MaskPlayerGlamours { get; set; } = true;
 

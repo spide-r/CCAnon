@@ -23,12 +23,12 @@ internal class GlamourerManager : IDisposable
 
     public void ApplyCustomization(ushort objectIndex, String state)
     {
-        ApplyState.Invoke(state, 0, objectIndex, ApplyFlag.Equipment | ApplyFlag.Once); //when i tested things its actually flip-flopped
+        ApplyState.Invoke(state, objectIndex, 0, ApplyFlag.Equipment | ApplyFlag.Once); //when i tested things the ApplyFlag is actually flip-flopped
     }
     
     public void ApplyOutfit(ushort objectIndex, String outfit)
     {
-        ApplyState.Invoke(outfit, 0, objectIndex, ApplyFlag.Customization | ApplyFlag.Once); 
+        ApplyState.Invoke(outfit, objectIndex, 0, ApplyFlag.Customization | ApplyFlag.Once); 
     }
 
     
