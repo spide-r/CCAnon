@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f36015a-ef0b-4834-8dae-ef9cbbf0d332" name="Changes" comment="should be working now">
-      <change afterPath="$PROJECT_DIR$/CCAnon/Maskers/PortraitHider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CCAnon/Windows/PortraitHidingWIndow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SamplePlugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SamplePlugin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCAnon/CCAnon.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/CCAnon.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCAnon/Maskers/AppearanceMasker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Maskers/AppearanceMasker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCAnon/Maskers/NameMasker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Maskers/NameMasker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCAnon/Plugin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/Plugin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCAnon/packages.lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/CCAnon/packages.lock.json" afterDir="false" />
-    </list>
+    <list default="true" id="3f36015a-ef0b-4834-8dae-ef9cbbf0d332" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +31,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d602d7be7857464d8f3d3dafdcbb46a334c610/4f/0eb1c301/IClientState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d602d7be7857464d8f3d3dafdcbb46a334c610/a7/f2dd0ff3/ObjectKind.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d602d7be7857464d8f3d3dafdcbb46a334c610/d2/e5ab03f0/NamePlateKind.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/RiderProjects/CCAnon/CCAnon/Maskers/AppearanceMasker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/RiderProjects/CCAnon/CCAnon/Maskers/AppearanceMasker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CCAnon/Plugin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CCAnon/Windows/ConfigWindow.cs" root0="FORCE_HIGHLIGHTING" />
@@ -87,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702226338947</updated>
-      <workItem from="1722700801759" duration="12117000" />
+      <workItem from="1722700801759" duration="12133000" />
     </task>
     <task id="LOCAL-00001" summary="beeeeg changes">
       <option name="closed" value="true" />
@@ -113,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722711269346</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="more edits">
+      <option name="closed" value="true" />
+      <created>1722713032245</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722713032245</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +127,7 @@
     <MESSAGE value="beeeeg changes" />
     <MESSAGE value="more stuff" />
     <MESSAGE value="should be working now" />
-    <option name="LAST_COMMIT_MESSAGE" value="should be working now" />
+    <MESSAGE value="more edits" />
+    <option name="LAST_COMMIT_MESSAGE" value="more edits" />
   </component>
 </project>

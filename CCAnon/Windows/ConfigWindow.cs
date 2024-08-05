@@ -1,23 +1,25 @@
 ﻿using System;
 using System.Numerics;
+using Dalamud.Game.ClientState.Keys;
 using Dalamud.Interface.Windowing;
 using ImGuiNET;
+using OtterGui.Widgets;
+using VirtualKeyExtensions = OtterGui.Classes.VirtualKeyExtensions;
 
 namespace CCAnon.Windows;
 
 public class ConfigWindow : Window, IDisposable
 {
     private Configuration Configuration;
-
-    // We give this window a constant ID using ###
-    // This allows for labels being dynamic, like "{FPS Counter}fps###XYZ counter window",
-    // and the window ID will always be "###XYZ counter window" for ImGui
+    public static VirtualKey[] ValidKeys;
     public ConfigWindow(Plugin plugin) : base("CCAnon")
     {
+        ValidKeys = Service.KeyState.GetValidVirtualKeys() as VirtualKey[];
+        //ValidKeys = Dalamud.Keys.GetValidVirtualKeys().Prepend(VirtualKey.NO_KEY).ToArray();
         SizeConstraints = new WindowSizeConstraints
         {
-            MinimumSize = new Vector2(100, 100),
-            MaximumSize = new Vector2(300, 200)
+            MinimumSize = new Vector2(300, 200),
+            MaximumSize = new Vector2(500, 500)
         };
         SizeCondition = ImGuiCond.Always;
 
@@ -50,6 +52,26 @@ public class ConfigWindow : Window, IDisposable
         {
             Configuration.HidePortraits = hidePortraits;
             Configuration.Save();
+        }
+
+        if (hidePortraits)
+        {
+            ImGui.Text("Set the keybind yourself. It needs to be a single button. I'm sorry.");
+            
+            var hideUI = Configuration.HideUiKeybind;
+            Widget.KeySelector("Hide UI Keybind", "",  hideUI, key =>
+            {
+                Service.PluginLog.Info("New Hide UI Keybind: " + key.GetFancyName());
+                Configuration.HideUiKeybind = key;
+                Configuration.Save();
+                Service.PluginLog.Info("New Hide UI Keybind: " + Configuration.HideUiKeybind.GetFancyName());
+
+            }, ValidKeys );
+            /*if (ImGui.InputText("Hide UI Keybind.", ref hideUI, 60))
+            {
+                Configuration.HideUIKeybind = hideUI;
+                Configuration.Save();
+            }*/
         }
         
         var maskPlayerAppearance = Configuration.MaskPlayerAppearance;

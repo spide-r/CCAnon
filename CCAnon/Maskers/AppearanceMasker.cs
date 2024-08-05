@@ -23,13 +23,12 @@ public class AppearanceMasker
 
     private void OnFrameworkUpdate(IFramework framework)
     {
-        if (!Service.ClientState.IsPvPExcludingDen)
+        if (!Service.isInCC())
         {
             return;
         }
         if (appliedUsers.Count != 9) //all 9 players have been modified - dont need to do anything
         {
-            Service.PluginLog.Info($"Count is {appliedUsers.Count}");
             try
             {
                 applyMasking();
@@ -59,7 +58,7 @@ public class AppearanceMasker
 
     private void applyMasking()
     {
-        if (!Service.ClientState.IsPvPExcludingDen)
+        if (!Service.isInCC())
         {
             Service.PluginLog.Info("Not PVP Excluding den"); //todo why does this only work when manually loading
 
@@ -74,30 +73,23 @@ public class AppearanceMasker
                     continue;
                 }
                 
-                Service.PluginLog.Info("Applied users list does not contain the game object id");
 
                 if (gameObject.GameObjectId == Service.ClientState.LocalPlayer.GameObjectId)
                 {
-                    Service.PluginLog.Info("ID is us - ignore");
-
                     continue;
                 }
                 IPlayerCharacter pc = (IPlayerCharacter) gameObject;
-                Service.PluginLog.Info($"PC is {pc.Name}");
 
                 String job = pc.ClassJob.GameData.Abbreviation.ToString();
                 String glamour = Glamours.getGlamour(job);
                 if (plugin.Configuration.MaskPlayerAppearance)
                 {
-                    Service.PluginLog.Info("Applying player appearance");
                     Service.GlamourerManager.ApplyCustomization(gameObject.ObjectIndex, hyur);
 
                 }
 
                 if (plugin.Configuration.MaskPlayerGlamours)
                 {
-                    Service.PluginLog.Info("Applying outfit change");
-
                     Service.GlamourerManager.ApplyOutfit(gameObject.ObjectIndex, glamour);
 
                 }

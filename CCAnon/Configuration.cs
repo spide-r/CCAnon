@@ -1,5 +1,6 @@
 ﻿using System;
 using Dalamud.Configuration;
+using Dalamud.Game.ClientState.Keys;
 using Dalamud.Plugin;
 
 namespace CCAnon;
@@ -14,6 +15,7 @@ public class Configuration : IPluginConfiguration
     public bool AbbreviateJobs { get; set; } = false;
     public bool MaskPlayerAppearance { get; set; } = true;
     public bool MaskPlayerGlamours { get; set; } = true;
+    public VirtualKey HideUiKeybind { get; set; } = VirtualKey.NO_KEY;
 
     // the below exist just to make saving less cumbersome
     

@@ -1,6 +1,31 @@
-﻿namespace CCAnon.Windows;
+﻿using System;
+using System.Numerics;
+using Dalamud.Interface.Windowing;
+using ImGuiNET;
 
-public class PortraitHidingWIndow
+namespace CCAnon.Windows;
+
+public class PortraitHidingWindow : Window, IDisposable
 {
-    //todo either this or manually hiding the UI when the match starts
+    private Configuration Configuration;
+    
+    public PortraitHidingWindow(Plugin plugin) : base("Portrait Hider")
+    {
+        SizeConstraints = new WindowSizeConstraints
+        {
+            MinimumSize = new Vector2(100, 100),
+            MaximumSize = new Vector2(300, 200)
+        };
+        SizeCondition = ImGuiCond.Always;
+
+        Configuration = plugin.Configuration;
+    }
+
+    public void Dispose() { }
+    
+    public override void Draw()
+    {
+        ImGui.Text("UI is currently being hidden by the portrait hider!" +
+                   "\nThe UI will automatically re-enabled shortly.");
+    }
 }

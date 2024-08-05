@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using CCAnon.Maskers;
 using CCAnon.Windows;
 using Dalamud.Game.Command;
@@ -6,6 +7,8 @@ using Dalamud.Interface.Windowing;
 using Dalamud.IoC;
 using Dalamud.Plugin;
 using Dalamud.Plugin.Services;
+using ECommons;
+using Module = System.Reflection.Module;
 
 namespace CCAnon;
 
@@ -24,6 +27,8 @@ public sealed class Plugin : IDalamudPlugin
 
     public readonly WindowSystem WindowSystem = new("CCAnon");
     private ConfigWindow ConfigWindow { get; init; }
+    private PortraitHidingWindow PortraitHidingWindow { get; init; }
+    private PortraitHider PortraitHider { get; init; }
     public Plugin(IDalamudPluginInterface pluginInterface,
                   ICommandManager commandManager)
     {
@@ -34,8 +39,10 @@ public sealed class Plugin : IDalamudPlugin
         Configuration.Initialize(PluginInterface);
         
         ConfigWindow = new ConfigWindow(this);
+        PortraitHidingWindow = new PortraitHidingWindow(this);
 
         WindowSystem.AddWindow(ConfigWindow);
+        WindowSystem.AddWindow(PortraitHidingWindow);
         
         CommandManager.AddHandler(CommandName, new CommandInfo(OnCommand)
         {
@@ -52,6 +59,9 @@ public sealed class Plugin : IDalamudPlugin
 
         NameMasker = new NameMasker(this);
         AppearanceMasker = new AppearanceMasker(this);
+        PortraitHider = new PortraitHider(this);
+        
+        ECommonsMain.Init(pluginInterface, this, ECommons.Module.All);
 
     }
     
@@ -70,7 +80,16 @@ public sealed class Plugin : IDalamudPlugin
 
     private void OnTestCommand(string command, string arguments)
     {
-        AppearanceMasker.TerritoryChanged(0);
+        try
+        {
+            PortraitHider.toggleUI();
+
+        }
+        catch (Exception e)
+        {
+            Service.PluginLog.Error(e, "asdasdfsdf");
+        }
+
     }
 
     public void Dispose()

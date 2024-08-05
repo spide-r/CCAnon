@@ -1,4 +1,5 @@
-﻿using Dalamud.IoC;
+﻿using System.Collections.Generic;
+using Dalamud.IoC;
 using Dalamud.Plugin;
 using Dalamud.Plugin.Services;
 using Glamourer.Api.Api;
@@ -53,7 +54,19 @@ internal class Service {
     [PluginService]
     internal static IToastGui ToastGui { get; private set; }
     
+    [PluginService]
+    internal static IKeyState KeyState { get; private set; }
+    
     internal static GlamourerManager GlamourerManager { get; private set; }
+    
+    private static List<uint> CCMaps = new ()
+    {
+        1032, 1058, 1033, 1059, 1034, 1060, 1116,  1117, 1138, 1139
+    };
+    public static bool isInCC()
+    {
+        return CCMaps.Contains(ClientState.TerritoryType);
+    }
     
     
     internal static void Initialize(IDalamudPluginInterface pluginInterface)

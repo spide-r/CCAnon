@@ -16,7 +16,7 @@ public class NameMasker
 
     private void OnNamePlateUpdate(INamePlateUpdateContext context, IReadOnlyList<INamePlateUpdateHandler> handlers)
     {
-        if (!Service.ClientState.IsPvPExcludingDen || !plugin.Configuration.HideNames)
+        if (!Service.isInCC() || !plugin.Configuration.HideNames)
         {
             return;
         }

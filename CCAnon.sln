@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCAnon", "CCAnon\CCAnon.csproj", "{13C812E9-0D42-4B95-8646-40EEBF30636F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommons", "ECommons\ECommons\ECommons.csproj", "{12EC6F1B-ADF4-4071-8BC2-231413E144CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtterGuiInternal", "OtterGuiInternal\OtterGuiInternal.csproj", "{AA687412-AF1E-4BE8-AADA-13AB94D262AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtterGui", "OtterGui\OtterGui.csproj", "{7F5E05D0-1BE4-4242-8260-35B3CD621D66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -19,6 +25,18 @@ Global
 		{4FEC9558-EB25-419F-B86E-51B8CFDA32B7}.Debug|x64.Build.0 = Debug|x64
 		{4FEC9558-EB25-419F-B86E-51B8CFDA32B7}.Release|x64.ActiveCfg = Release|x64
 		{4FEC9558-EB25-419F-B86E-51B8CFDA32B7}.Release|x64.Build.0 = Release|x64
+		{12EC6F1B-ADF4-4071-8BC2-231413E144CD}.Debug|x64.ActiveCfg = Debug|x64
+		{12EC6F1B-ADF4-4071-8BC2-231413E144CD}.Debug|x64.Build.0 = Debug|x64
+		{12EC6F1B-ADF4-4071-8BC2-231413E144CD}.Release|x64.ActiveCfg = Release|x64
+		{12EC6F1B-ADF4-4071-8BC2-231413E144CD}.Release|x64.Build.0 = Release|x64
+		{AA687412-AF1E-4BE8-AADA-13AB94D262AB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AA687412-AF1E-4BE8-AADA-13AB94D262AB}.Debug|x64.Build.0 = Debug|Any CPU
+		{AA687412-AF1E-4BE8-AADA-13AB94D262AB}.Release|x64.ActiveCfg = Release|Any CPU
+		{AA687412-AF1E-4BE8-AADA-13AB94D262AB}.Release|x64.Build.0 = Release|Any CPU
+		{7F5E05D0-1BE4-4242-8260-35B3CD621D66}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7F5E05D0-1BE4-4242-8260-35B3CD621D66}.Debug|x64.Build.0 = Debug|Any CPU
+		{7F5E05D0-1BE4-4242-8260-35B3CD621D66}.Release|x64.ActiveCfg = Release|Any CPU
+		{7F5E05D0-1BE4-4242-8260-35B3CD621D66}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

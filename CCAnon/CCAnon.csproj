@@ -20,7 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ECommons" Version="2.0.0.4" />
     <PackageReference Include="Glamourer.Api" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ECommons\ECommons\ECommons.csproj" />
+    <ProjectReference Include="..\OtterGuiInternal\OtterGuiInternal.csproj" />
+    <ProjectReference Include="..\OtterGui\OtterGui.csproj" />
   </ItemGroup>
 </Project>
