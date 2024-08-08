@@ -13,13 +13,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="..\Data\goat.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Visible>false</Visible>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Glamourer.Api" Version="2.1.0" />
   </ItemGroup>
 
