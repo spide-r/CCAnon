@@ -30,6 +30,8 @@ public class ConfigWindow : Window, IDisposable
     
     public override void Draw()
     {
+        ImGui.Text("Unfortunately I cannot yet hide player names in party and enemy lists. Please look forward to it.");
+        ImGui.Separator();
         var hideNames = Configuration.HideNames;
         if (ImGui.Checkbox("Hide Player Names", ref hideNames))
         {
@@ -56,7 +58,9 @@ public class ConfigWindow : Window, IDisposable
 
         if (hidePortraits)
         {
-            ImGui.Text("Set the keybind yourself. It needs to be a single button. I'm sorry.");
+            ImGui.Text("Two disclaimers: ");
+            ImGui.Text("1. Set the keybind yourself. It needs to be a single button. I'm sorry.");
+            ImGui.Text("2. This will auto-hide your UI at the start of a match and show it after ~32 seconds. ");
             
             var hideUI = Configuration.HideUiKeybind;
             Widget.KeySelector("Hide UI Keybind", "",  hideUI, key =>
@@ -81,10 +85,17 @@ public class ConfigWindow : Window, IDisposable
             Configuration.Save();
         }
         
-        var maskPlayerGLamours = Configuration.MaskPlayerGlamours;
-        if (ImGui.Checkbox("Mask Player Glamours", ref maskPlayerGLamours))
+        var maskPlayerGlamours = Configuration.MaskPlayerGlamours;
+        if (ImGui.Checkbox("Mask Player Glamours", ref maskPlayerGlamours))
         {
-            Configuration.MaskPlayerGlamours = maskPlayerGLamours;
+            Configuration.MaskPlayerGlamours = maskPlayerGlamours;
+            Configuration.Save();
+        }
+
+        var maskChat = Configuration.MaskChat;
+        if (ImGui.Checkbox("Hide identities of people in chat.", ref maskChat))
+        {
+            Configuration.MaskChat = maskChat;
             Configuration.Save();
         }
     }

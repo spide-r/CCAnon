@@ -29,6 +29,7 @@ public sealed class Plugin : IDalamudPlugin
     private ConfigWindow ConfigWindow { get; init; }
     private PortraitHidingWindow PortraitHidingWindow { get; init; }
     private PortraitHider PortraitHider { get; init; }
+    private ChatMasker ChatMasker { get; init; }
     public Plugin(IDalamudPluginInterface pluginInterface,
                   ICommandManager commandManager)
     {
@@ -60,6 +61,7 @@ public sealed class Plugin : IDalamudPlugin
         NameMasker = new NameMasker(this);
         AppearanceMasker = new AppearanceMasker(this);
         PortraitHider = new PortraitHider(this);
+        ChatMasker = new ChatMasker(this);
         
         ECommonsMain.Init(pluginInterface, this, ECommons.Module.All);
 
@@ -83,11 +85,12 @@ public sealed class Plugin : IDalamudPlugin
         try
         {
             PortraitHider.toggleUI();
+            PortraitHider.flipBackUI();
 
         }
         catch (Exception e)
         {
-            Service.PluginLog.Error(e, "asdasdfsdf");
+            Service.PluginLog.Error(e, "error in test command!");
         }
 
     }
