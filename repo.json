@@ -16,6 +16,7 @@
         "LoadPriority": 69420,
         "DownloadLinkInstall": "https://github.com/spide-r/CCAnon/releases/download/0.0.0.1/latest.zip",
         "DownloadLinkTesting": "https://github.com/spide-r/CCAnon/releases/download/0.0.0.1/latest.zip",
-        "DownloadLinkUpdate": "https://github.com/spide-r/CCAnon/releases/download/0.0.0.1/latest.zip"
+        "DownloadLinkUpdate": "https://github.com/spide-r/CCAnon/releases/download/0.0.0.1/latest.zip",
+        "IconUrl": "https://raw.githubusercontent.com/spide-r/CCAnon/master/icon.png"
     }
 ]
