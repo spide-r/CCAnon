@@ -30,7 +30,8 @@ public class ConfigWindow : Window, IDisposable
     
     public override void Draw()
     {
-        ImGui.Text("Unfortunately I cannot yet hide player names in party and enemy lists. Please look forward to it.");
+        ImGui.Text("Unfortunately I cannot yet hide player names in party and enemy lists." +
+                   "\nPlease look forward to it.");
         ImGui.Separator();
         var hideNames = Configuration.HideNames;
         if (ImGui.Checkbox("Hide Player Names", ref hideNames))
@@ -98,5 +99,7 @@ public class ConfigWindow : Window, IDisposable
             Configuration.MaskChat = maskChat;
             Configuration.Save();
         }
+        ImGui.Separator();
+        ImGui.BulletText("Thank you to Mutant Standard (CC BY-NC-SA) - https://mutant.tech");
     }
 }

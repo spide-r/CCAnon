@@ -9,6 +9,7 @@ public class PortraitHidingWindow : Window, IDisposable
 {
     private Configuration Configuration;
     
+    //This will be used eventually once I figure out how to show Imgui windows despite GUI being hidden
     public PortraitHidingWindow(Plugin plugin) : base("Portrait Hider")
     {
         SizeConstraints = new WindowSizeConstraints
