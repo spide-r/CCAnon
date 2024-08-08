@@ -27,11 +27,11 @@ public class ChatMasker
         {
             if (Service.isInCC() && type == XivChatType.Party)
             {
-                Service.PluginLog.Info($"New Party Chat message! Sender: {sender}, Message: {message.TextValue}");
+                //Service.PluginLog.Info($"New Party Chat message! Sender: {sender}, Message: {message.TextValue}");
                 var job = "";
                 foreach (var payload in sender.Payloads)
                 {
-                    Service.PluginLog.Info($"Payload: {payload.Type} | {payload}");
+                    //Service.PluginLog.Info($"Payload: {payload.Type} | {payload}");
                     if (payload.Type == PayloadType.Player)
                     {
                         ishandled = true;
